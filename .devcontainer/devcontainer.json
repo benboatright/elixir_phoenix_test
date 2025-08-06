@@ -1,19 +1,8 @@
 {
- "name": "Phoenix",
- "dockerComposeFile": "docker-compose.yml",
- "service": "app",
- "workspaceFolder": "/workspace",
-
- "customizations": {
-  "vscode": {
-   "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-   },
-   "extensions": [
-    "dbaeumer.vscode-eslint",
-    "jakebecker.elixir-ls",
-    "vue.volar"
-   ]
-  }
- }
+  "image": "hexpm/elixir:1.12.2-erlang-24.0.4-ubuntu-focal-20210325",
+  "name": "transhook-devcontainer",
+  "onCreateCommand": "elixir --version",
+  "forwardPorts": [
+    4000
+  ]
 }
