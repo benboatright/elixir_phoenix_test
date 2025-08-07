@@ -4,5 +4,12 @@
   "onCreateCommand": "elixir --version",
   "forwardPorts": [
     4000
-  ]
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "JakeBecker.elixir-ls"
+      ]
+    }
+  }
 }
