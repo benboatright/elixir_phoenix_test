@@ -1,15 +1,31 @@
 {
-  "image": "elixir:1.18.4",
-  "name": "test-devcontainer",
-  "onCreateCommand": "elixir --version",
-  "forwardPorts": [
-    4000
-  ],
+  "name": "Docker Phoenix",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+  "forwardPorts": [4000],
+  "shutdownAction": "stopCompose",
+
   "customizations": {
     "vscode": {
       "extensions": [
-        "JakeBecker.elixir-ls"
-      ]
+        "jakebecker.elixir-ls",
+        "phoenixframework.phoenix",
+        "bradlc.vscode-tailwindcss",
+        "florinpatrascu.vscode-elixir-snippets"
+      ],
+      "settings": {
+        "emmet.includeLanguages": {
+          "elixir": "html",
+          "phoenix-heex": "html"
+        },
+        "emmet.triggerExpansionOnTab": true,
+        "tailwindCSS.includeLanguages": {
+          "elixir": "html",
+          "phoenix-heex": "html"
+        },
+        "tailwindCSS.emmetCompletions": true
+      }
     }
   }
 }
