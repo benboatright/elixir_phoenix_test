@@ -18,6 +18,9 @@ defmodule TestAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    # Added this
+    live "/light", LightLive, :light
   end
 
   # Other scopes may use custom stacks.
